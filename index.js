@@ -40,25 +40,26 @@ const closeButton = document.querySelector('.close');
 const modal = document.querySelector('.modal');
 reserve.addEventListener('click', () => {
   modal.style.transform = 'translateY(0)';
+  window.document.body.style.overflow = 'hidden';
 });
 closeButton.addEventListener('click', () => {
   modal.style.transform = 'translateY(-100%)';
+  window.document.body.style.overflow = '';
 });
 
 const mobileCloseButton = document.querySelector('.mobile-close');
 const mobileMenu = document.querySelector('.mobile-menu');
 const mobileMenuButton = document.querySelector('button.mobile-menu__btn');
 
-console.log(mobileMenuButton)
+console.log(mobileMenuButton);
 mobileMenuButton.addEventListener('click', () => {
-  console.log('hey');
   mobileMenu.style.transform = 'translateX(0)';
 });
 mobileCloseButton.addEventListener('click', () => {
   mobileMenu.style.transform = 'translateX(-200%)';
 });
 
-const formElement = document.querySelector('form');
+const formElement = document.querySelector('#form');
 const handleSubmit = (event) => {
   event.preventDefault();
   const body = new FormData(event.target);
@@ -68,13 +69,13 @@ const handleSubmit = (event) => {
   fetch(URL, { method, body })
     .then((res) => {
       if (!res.ok) {
-        throw new Error("Error!");
+        throw new Error('Error!');
       }
-      console.log("Success!");
+      console.log('Success!');
     })
     .catch((error) => {
       console.error(error.message);
     });
 };
 
-formElement.addEventListener("submit", handleSubmit);
+formElement.addEventListener('submit', handleSubmit);
