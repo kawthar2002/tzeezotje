@@ -340,14 +340,13 @@ header {
 }
 .mobile-menu {
   overflow: hidden;
-  transform: translateX(-100%);
-  overflow: hidden;
   position: absolute;
   width: 100%;
   top: 0;
   transition: transform .3s;
 }
 .mobile-menu__inner {
+  transform: translateX(-100%);
   background-color: #fff;
   border-radius: 25px;
   padding: 40px;

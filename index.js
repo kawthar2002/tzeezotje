@@ -47,11 +47,12 @@ closeButton.addEventListener('click', () => {
 
 const mobileCloseButton = document.querySelector('.mobile-close');
 const mobileMenu = document.querySelector('.mobile-menu');
-const mobileMenuButton = document.querySelector('.mobile-menu__btn ')
+const mobileMenuButton = document.querySelector('.mobile-menu__btn');
 
 mobileMenuButton.addEventListener('click', () => {
-  mobileMenu.style.transform = 'translateX(0)'
-})
+  console.log('hey');
+  mobileMenu.style.transform = 'translateX(0)';
+});
 mobileCloseButton.addEventListener('click', () => {
-  mobileMenu.style.transform = 'translateX(-100%)'
-})
+  mobileMenu.style.transform = 'translateX(-100%)';
+});
