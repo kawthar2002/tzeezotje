@@ -47,12 +47,34 @@ closeButton.addEventListener('click', () => {
 
 const mobileCloseButton = document.querySelector('.mobile-close');
 const mobileMenu = document.querySelector('.mobile-menu');
-const mobileMenuButton = document.querySelector('.mobile-menu__btn');
+const mobileMenuButton = document.querySelector('button.mobile-menu__btn');
 
+console.log(mobileMenuButton)
 mobileMenuButton.addEventListener('click', () => {
   console.log('hey');
   mobileMenu.style.transform = 'translateX(0)';
 });
 mobileCloseButton.addEventListener('click', () => {
-  mobileMenu.style.transform = 'translateX(-100%)';
+  mobileMenu.style.transform = 'translateX(-200%)';
 });
+
+const formElement = document.querySelector('form');
+const handleSubmit = (event) => {
+  event.preventDefault();
+  const body = new FormData(event.target);
+  const URL = event.target.action;
+  const method = event.target.method;
+
+  fetch(URL, { method, body })
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Error!");
+      }
+      console.log("Success!");
+    })
+    .catch((error) => {
+      console.error(error.message);
+    });
+};
+
+formElement.addEventListener("submit", handleSubmit);

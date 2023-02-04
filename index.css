@@ -336,21 +336,21 @@ header {
   top: 0;
   right: 0;
   display: none;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 .mobile-menu {
-  overflow: hidden;
   position: absolute;
   width: 100%;
   top: 0;
-  transition: transform .3s;
+  transition: transform 0.3s;
+  transform: translateX(-200%);
 }
 .mobile-menu__inner {
-  transform: translateX(-100%);
   background-color: #fff;
   border-radius: 25px;
   padding: 40px;
   color: #000000;
+
 }
 .mobile-close {
   cursor: pointer;
@@ -428,6 +428,7 @@ header {
   }
   .slider {
     padding: 100px 0;
+    margin-top: 50px;
   }
   .slider-buttons {
     top: 0;
@@ -443,7 +444,10 @@ header {
   }
   .mobile-menu__btn {
     display: flex;
-    margin-bottom: 10px;
+    margin-top: 18px;
+  }
+  .menu {
+    padding-bottom: 0;
   }
   .menu-photos {
     display: none;
