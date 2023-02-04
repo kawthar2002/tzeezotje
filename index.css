@@ -302,6 +302,7 @@ header {
   font-size: 48px;
   line-height: 88px;
   color: #000000;
+  white-space: nowrap;
 }
 .modal-form label::placeholder {
   color: #808080;
